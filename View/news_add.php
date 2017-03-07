@@ -27,13 +27,20 @@ session_start();
 </form>
 
 <?php
+echo "<hr> Ошибочки: ".$_SESSION['add_err']."<hr>";
+echo "<hr> add_ok: ".$_SESSION['add_ok']."<hr>";
+
+
 if (isset($_SESSION['add_err'])){
     echo "<br><br><br>
         Ошибочки: ".$_SESSION['add_err'];
-}
+    }
 
-if (isset($_SESSION['add_ok']))
+if (isset($_SESSION['add_ok'])){
     echo "<br><br><br>KPACUBO";
+    unset($_SESSION['add_ok']);
+    }
+
 ?>
 
 </body>

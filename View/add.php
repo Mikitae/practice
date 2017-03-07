@@ -8,21 +8,22 @@ session_start();
  */
 
 
-$data = $_POST;
 
+
+$data = $_POST;
 
 var_dump($data);
 if (isset($data['go'])){
 
     if (trim($data['news'])==''){
         $errors[] = "Введите новость";
-
     }
 
     if (isset($errors)){
         $_SESSION['add_err'] = array_shift($errors);
-        //header("location: ".__DIR__."/news_add.php");
+       // header("location: ".__DIR__."//news_add.php");
         header("location: /second_pr/practice/View/news_add.php ");
+
     }
     else{
         if (isset($_SESSION['add_err']))
@@ -33,5 +34,3 @@ if (isset($data['go'])){
    // var_dump($_SESSION['add_err']);
 }
 ?>
-<html><a href="<?=__DIR__.'/news_add.php '?>">sssssss</a></html>
-<html><a href="/second_pr/practice/View/news_add.php ">aaaaaaa</a> </html>
