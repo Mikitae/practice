@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 /**
  * Created by PhpStorm.
  * User: Никитка
@@ -18,7 +18,7 @@ session_start();
 </head>
 <body>
 
-<form action="add.php" method="post">
+<form action="../Controller/news_add.php" method="post">
     <p><textarea rows="10" cols="45" name="news" placeholder="Ваша новость"  ></textarea></p>
     <br>
     <!--<button type="submit" name="go">Отправить</button>-->
@@ -27,8 +27,8 @@ session_start();
 </form>
 
 <?php
-echo "<hr> Ошибочки: ".$_SESSION['add_err']."<hr>";
-echo "<hr> add_ok: ".$_SESSION['add_ok']."<hr>";
+//echo "<hr> Ошибочки: ".@$_SESSION['add_err'];
+//echo "<hr> add_ok: ".@$_SESSION['add_ok']."<hr>";
 
 
 if (isset($_SESSION['add_err'])){
@@ -36,7 +36,7 @@ if (isset($_SESSION['add_err'])){
         Ошибочки: ".$_SESSION['add_err'];
     }
 
-if (isset($_SESSION['add_ok'])){
+if (@isset($_SESSION['add_ok'])){
     echo "<br><br><br>KPACUBO";
     unset($_SESSION['add_ok']);
     }
