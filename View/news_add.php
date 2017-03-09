@@ -43,5 +43,9 @@ if (@isset($_SESSION['add_ok'])){
 
 ?>
 
+<br><br>
+<a href="../Controller/">Просмотреть весь список</a>
+
+
 </body>
 </html>

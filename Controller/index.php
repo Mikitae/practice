@@ -6,23 +6,15 @@
  * Time: 18:20
  */
 
+require_once '../Model/all_news.php';
 
+$my_news = getNews();
+
+
+
+require_once '../View/all_news.php';
 
 /*
-
-//$mysqli = new mysqli("localhost","root","","php_lessons");
-$link = mysqli_connect("localhost","root","","php_lessons");
-$res = mysqli_query($link,'INSERT INTO \'news\'(\'text\') VALUES (\'chlen\')');
-//$mysqli->query("INSERT INTO 'news'('text') VALUES ('chlen')");
-//$res = $mysqli->query("INSERT INTO `news`(`text`) VALUES (`chlen`)");
-if ($res){
-    echo "ooooook";
-}else{
-    echo "noooot ooooook";
-}
-
-*/
-
 $mysqli=new mysqli('localhost','root','','php_lessons');
 $mysqli->query("SET NAMES 'utf8'");
 $q=$mysqli->query("select * from news");
@@ -36,7 +28,7 @@ echo $mysqli->error;
 $q=$mysqli->query("select * from news");
 while($r=$q->fetch_assoc()) {
     print_r($r);
-}
+}*/
 
 
 
